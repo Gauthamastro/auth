@@ -24,12 +24,13 @@ function App() {
                     return ""
                 }
             } else {
-                console.warn('Please install Polka Chrome extension first.')
+                console.warn('Please install Polka Chrome extension first from https://polkadot.js.org/extension/')
                 return ""
             }
         }
         // This is how auth should work
         // For more documenatation check out: https://polkadot.js.org/docs/extension
+        // Please install polkadotjs-extension and create an account in it before running this application
         getExtensionAddress().then(account => {
             if (account !== "") {
                 console.log("Users's Address: ", account.address)
