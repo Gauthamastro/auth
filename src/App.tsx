@@ -34,7 +34,7 @@ function App() {
         getExtensionAddress().then(account => {
             if (account !== "") {
                 console.log("Users's Address: ", account.address)
-                // GET Request to path to get a response like {"time":1623693678}
+                // GET Request to path {domain of Openware}/api/v2/barong/identity/time to get a response like {"time":1623693678}
                 // we use the value of 'time' as nonce
                 // using a hardcoded nonce as example
                 let nonce = "1623693678";
