@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@polkadot/extension-dapp": "^0.38.5",
+    "@polkadot/ui-keyring": "^0.84.1",
+    "@polkadot/ui-settings": "^0.84.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
