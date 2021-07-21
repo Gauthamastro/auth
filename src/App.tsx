@@ -46,7 +46,7 @@ function App() {
                 const signature = pair.sign(stringToU8a(hash));
                 console.log("Signature: ",u8aToHex(signature))
                 // Now do
-                // POST /api/v2/barong/identity/sessions
+                // POST /api/v2/barong/identity/sessions/signature
                 let payload = {
                     "nickname": address,
                     "algo": "ED25519", // NOTE: OPENWARE TEAM PLEASE NOTE THIS
