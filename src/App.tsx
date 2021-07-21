@@ -4,7 +4,7 @@ import './App.css';
 import {mnemonicGenerate} from '@polkadot/util-crypto';
 import { Keyring } from '@polkadot/keyring';
 const {blake2AsHex} = require('@polkadot/util-crypto');
-const { u8aToHex } = require('@polkadot/util');
+const { u8aToHex, stringToU8a } = require('@polkadot/util');
 
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
                 console.log("Message to sign: ", message);
                 const hash = blake2AsHex(message)
                 console.log("Message Hash", hash);
-                const signature = pair.sign(hash);
+                const signature = pair.sign(stringToU8a(hash));
                 console.log("Signature: ",u8aToHex(signature))
                 // Now do
                 // POST /api/v2/barong/identity/sessions
